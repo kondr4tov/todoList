@@ -1,6 +1,11 @@
 import { useState, useEffect, useRef } from "react"
 import { ITodo } from '../types/data';
 import { TodoList } from "./TodoList";
+import Header from './Header'
+import Card from './Card'
+import Grid from '@mui/system/Unstable_Grid/Grid';
+import Grids from './Grids'
+
 
 const App: React.FC = () => {
     const[value, setValue] = useState('');
@@ -49,22 +54,33 @@ const App: React.FC = () => {
     })
 
     return (
-      <div>
+        <>
+        <Header />
+        <Grid container padding={10} margin={3}>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+        </Grid>
         <div>
-          <input
-            type="text"
-            value={value}
-            onChange={handleChange}
-            onKeyDown={handleKeyDown}
-            ref={inputRef}
-          />
-          <button onClick={addTodo}>Add</button>
+            <div>
+            <input
+             type="text"
+             value={value}
+                onChange={handleChange}
+                onKeyDown={handleKeyDown}
+                ref={inputRef}
+            />
+            <button onClick={addTodo}>Add</button>
         </div>
         <TodoList 
             items={todos}
             removeTodo={removeTodo}
-            toggleTodo={toggleTodo} />
+            toggleTodo={toggleTodo}
+        />
       </div>
+      </>
     );
 }
 
