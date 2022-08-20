@@ -1,0 +1,14 @@
+.BNCss {
+    color: white;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-image: linear-gradient(left,rgb(23, 120, 156),rgb(177, 234, 244));
+    background-image: -o-linear-gradient(left,rgb(23, 120, 156),rgb(177, 234, 244));
+    background-image: -moz-linear-gradient(left,rgb(23, 120, 156),rgb(177, 234, 244));
+    background-image: -webkit-linear-gradient(left,rgb(23, 120, 156),rgb(177, 234, 244));
+}
+
+.ActionCss {
+    color: rgb(255, 255, 255);
+}

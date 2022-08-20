@@ -5,6 +5,7 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import './Card.css'
 
 const bull = (
   <Box
@@ -17,7 +18,8 @@ const bull = (
 
 export default function BasicCard() {
   return (
-    <Card sx={{ minWidth: 250 }}>
+    <Card className="CardCss" sx={{ minWidth: 200
+     }}>
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
           Word of the Day
@@ -35,7 +37,7 @@ export default function BasicCard() {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Learn More</Button>
+        <Button className="ButtonCss" size="small">Learn More</Button>
       </CardActions>
     </Card>
   );

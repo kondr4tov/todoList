@@ -26,7 +26,7 @@ export default function SpacingGrid() {
             <Grid key={value} item>
               <Paper
                 sx={{
-                  height: 140,
+                  height: 10,
                   width: 100,
                   backgroundColor: (theme) =>
                     theme.palette.mode === 'dark' ? '#1A2027' : '#fff',

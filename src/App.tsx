@@ -1,10 +1,13 @@
 import { useState, useEffect, useRef } from "react"
-import { ITodo } from '../types/data';
-import { TodoList } from "./TodoList";
-import Header from './Header'
-import Card from './Card'
+import { ITodo } from './types/data';
 import Grid from '@mui/system/Unstable_Grid/Grid';
-import Grids from './Grids'
+import Grids from './components/Grids'
+import './App.css'
+import Card from "./components/Card/Card";
+import Header from "./components/Header/Header";
+import { TodoList } from "./components/TodoList";
+import BottomNavigation from "./components/BottomNavigation/BottomNavigation";
+import Footer from "./components/Footer/Footer";
 
 
 const App: React.FC = () => {
@@ -56,30 +59,15 @@ const App: React.FC = () => {
     return (
         <>
         <Header />
-        <Grid container padding={10} margin={3}>
+        <Grid container padding={3} margin={1} columnGap={3} rowGap={3}>
+            <Card/>
             <Card/>
             <Card/>
             <Card/>
             <Card/>
             <Card/>
         </Grid>
-        <div>
-            <div>
-            <input
-             type="text"
-             value={value}
-                onChange={handleChange}
-                onKeyDown={handleKeyDown}
-                ref={inputRef}
-            />
-            <button onClick={addTodo}>Add</button>
-        </div>
-        <TodoList 
-            items={todos}
-            removeTodo={removeTodo}
-            toggleTodo={toggleTodo}
-        />
-      </div>
+        <Footer />
       </>
     );
 }

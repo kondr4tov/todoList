@@ -1,0 +1,13 @@
+.footer{
+    color: white;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-image: linear-gradient(left,rgb(23, 120, 156),rgb(177, 234, 244));
+    background-image: -o-linear-gradient(left,rgb(23, 120, 156),rgb(177, 234, 244));
+    background-image: -moz-linear-gradient(left,rgb(23, 120, 156),rgb(177, 234, 244));
+    background-image: -webkit-linear-gradient(left,rgb(23, 120, 156),rgb(177, 234, 244));
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}

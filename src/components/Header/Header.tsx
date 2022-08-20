@@ -12,6 +12,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import School from '@mui/icons-material/School';
+import './Header.css'
 
 const pages = ['Learning', 'Diagnostic', 'Analytics'];
 const settings = ['Profile', 'Statistic', 'Items', 'Logout'];
@@ -36,7 +37,7 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar className="App-header" position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <School sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -55,7 +56,7 @@ const ResponsiveAppBar = () => {
               textDecoration: 'none',
             }}
           >
-            Our online school
+            ALMath
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -111,9 +112,9 @@ const ResponsiveAppBar = () => {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            ALMath
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box className="BoxCss" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page}
